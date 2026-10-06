@@ -1,10 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Satr — Me</title>
-<meta name="description" content="Satr — coder, builder and creator from Sweden.">
+
+<meta
+  name="description"
+  content="Satr — coder, builder and creator from Sweden."
+>
 
 <style>
 :root{
@@ -19,7 +25,9 @@
   --shadow:0 24px 80px rgba(0,0,0,.35);
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 html{
   scroll-behavior:smooth;
@@ -29,11 +37,28 @@ body{
   margin:0;
   min-height:100vh;
   color:var(--text);
+
   background:
-    radial-gradient(circle at 15% 0%,rgba(124,140,255,.16),transparent 34%),
-    radial-gradient(circle at 85% 20%,rgba(86,214,201,.09),transparent 28%),
+    radial-gradient(
+      circle at 15% 0%,
+      rgba(124,140,255,.16),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(86,214,201,.09),
+      transparent 28%
+    ),
     var(--bg);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 a{
@@ -46,18 +71,25 @@ a{
   margin:auto;
 }
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
 
 nav{
   height:72px;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
+
   border-bottom:1px solid var(--border);
+
   backdrop-filter:blur(18px);
+
   position:sticky;
   top:0;
   z-index:10;
+
   background:rgba(7,9,13,.68);
 }
 
@@ -78,9 +110,14 @@ nav{
 
 .navlinks a{
   padding:9px 13px;
+
   color:var(--muted);
+
   font-size:14px;
+
   border-radius:10px;
+
+  transition:.2s ease;
 }
 
 .navlinks a:hover{
@@ -88,7 +125,9 @@ nav{
   color:var(--text);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   padding:76px 0 34px;
@@ -97,97 +136,140 @@ nav{
 .hero-grid{
   display:grid;
   grid-template-columns:1fr 340px;
+
   gap:26px;
+
   align-items:stretch;
 }
 
 .card{
-  background:linear-gradient(
-    145deg,
-    rgba(255,255,255,.055),
-    rgba(255,255,255,.018)
-  );
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.055),
+      rgba(255,255,255,.018)
+    );
+
   border:1px solid var(--border);
+
   border-radius:28px;
+
   box-shadow:var(--shadow);
+
   backdrop-filter:blur(22px);
 }
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 .intro{
   padding:42px;
+
   position:relative;
   overflow:hidden;
 }
 
 .intro:after{
   content:"";
+
   position:absolute;
+
   width:280px;
   height:280px;
+
   border-radius:50%;
+
   background:rgba(124,140,255,.12);
+
   filter:blur(50px);
+
   right:-100px;
   top:-120px;
 }
 
 .kicker{
   color:var(--accent2);
+
   font-size:13px;
   font-weight:700;
+
   text-transform:uppercase;
+
   letter-spacing:.14em;
 }
 
 h1{
   font-size:clamp(48px,8vw,82px);
+
   line-height:.92;
+
   letter-spacing:-.07em;
+
   margin:16px 0;
 }
 
 .handle{
   font-size:18px;
+
   color:var(--muted);
+
   margin-bottom:25px;
 }
 
 .bio{
   font-size:18px;
+
   line-height:1.65;
+
   color:#d5d9e2;
+
   max-width:700px;
 }
 
 .actions{
   display:flex;
+
   gap:10px;
+
   flex-wrap:wrap;
+
   margin-top:28px;
 }
 
 .btn{
   display:inline-flex;
+
   align-items:center;
+
   gap:8px;
+
   padding:12px 17px;
+
   border-radius:13px;
+
   border:1px solid var(--border);
+
   background:rgba(255,255,255,.045);
+
   font-weight:650;
+
   font-size:14px;
+
+  transition:.2s ease;
 }
 
 .btn.primary{
   background:var(--text);
+
   color:#090b10;
+
   border-color:transparent;
 }
 
 .btn:hover{
   transform:translateY(-1px);
+
   background:rgba(255,255,255,.09);
 }
 
@@ -195,76 +277,118 @@ h1{
   background:#fff;
 }
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 .profile{
   padding:28px;
+
   display:flex;
+
   flex-direction:column;
+
   align-items:center;
+
   justify-content:center;
+
   text-align:center;
 }
 
 .avatar{
   width:156px;
   height:156px;
+
   border-radius:50%;
+
   object-fit:cover;
+
   border:5px solid rgba(255,255,255,.08);
-  box-shadow:0 15px 50px rgba(0,0,0,.4);
+
+  box-shadow:
+    0 15px 50px rgba(0,0,0,.4);
 }
 
 .status{
   margin-top:18px;
+
   color:#aeb4c0;
+
   font-size:14px;
 }
 
 .dot{
   display:inline-block;
+
   width:8px;
   height:8px;
+
   border-radius:50%;
+
   background:#56d6c9;
+
   margin-right:7px;
-  box-shadow:0 0 14px #56d6c9;
+
+  box-shadow:
+    0 0 14px #56d6c9;
 }
 
 .location{
   margin-top:8px;
+
   color:var(--muted);
+
   font-size:14px;
 }
 
+/* =========================
+   PROFILE STATS
+========================= */
+
 .stats{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:8px;
+
   width:100%;
+
   margin-top:25px;
 }
 
 .stat{
   padding:14px 8px;
+
   border:1px solid var(--border);
+
   border-radius:15px;
+
   background:rgba(255,255,255,.025);
 }
 
 .stat strong{
   display:block;
+
   font-size:22px;
+
+  min-height:27px;
 }
 
 .stat span{
   color:var(--muted);
+
   font-size:11px;
+
   text-transform:uppercase;
+
   letter-spacing:.08em;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
   padding:28px 0;
@@ -272,114 +396,166 @@ section{
 
 .section-head{
   display:flex;
+
   align-items:end;
+
   justify-content:space-between;
+
   margin-bottom:17px;
 }
 
 .section-head h2{
   font-size:26px;
+
   letter-spacing:-.04em;
+
   margin:0;
 }
 
 .section-head p{
   color:var(--muted);
+
   margin:0;
+
   font-size:14px;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
   gap:14px;
 }
 
 .project{
   padding:24px;
+
   min-height:190px;
+
   display:flex;
+
   flex-direction:column;
+
   transition:.2s ease;
 }
 
 .project:hover{
-  border-color:rgba(124,140,255,.32);
+  border-color:
+    rgba(124,140,255,.32);
+
   transform:translateY(-2px);
 }
 
 .project-top{
   display:flex;
+
   justify-content:space-between;
+
   gap:12px;
 }
 
 .project h3{
   font-size:19px;
+
   margin:0;
+
   letter-spacing:-.025em;
 }
 
 .badge{
   font-size:11px;
+
   color:#b9becc;
+
   border:1px solid var(--border);
+
   padding:5px 8px;
+
   border-radius:999px;
 }
 
 .project p{
   color:var(--muted);
+
   line-height:1.55;
+
   font-size:14px;
+
   flex:1;
+
   margin:15px 0;
 }
 
 .lang{
   font-size:12px;
+
   color:#c8ccd5;
 }
 
 .lang i{
   display:inline-block;
+
   width:8px;
   height:8px;
+
   border-radius:50%;
+
   background:var(--accent);
+
   margin-right:6px;
 }
 
-/* GITHUB STATS */
+/* =========================
+   GITHUB STATS
+========================= */
 
 .github-stats{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:14px;
 }
 
 .github-stat-card{
   padding:18px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   overflow:hidden;
 }
 
 .github-stat-card img{
   width:100%;
+
   height:auto;
+
   display:block;
+
   border-radius:14px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about{
   display:grid;
-  grid-template-columns:1.2fr .8fr;
+
+  grid-template-columns:
+    1.2fr .8fr;
+
   gap:14px;
 }
 
@@ -393,30 +569,43 @@ section{
 
 .about-card p{
   color:var(--muted);
+
   line-height:1.7;
 }
 
 .tags{
   display:flex;
+
   flex-wrap:wrap;
+
   gap:8px;
 }
 
 .tag{
   padding:8px 11px;
+
   border-radius:10px;
+
   background:rgba(255,255,255,.045);
+
   border:1px solid var(--border);
+
   font-size:13px;
+
   color:#c8ccd5;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   padding:55px 0 35px;
+
   text-align:center;
+
   color:#707682;
+
   font-size:13px;
 }
 
@@ -424,10 +613,13 @@ footer a{
   color:#aeb4c0;
 }
 
-/* ANIMATION */
+/* =========================
+   ANIMATION
+========================= */
 
 .reveal{
-  animation:rise .7s ease both;
+  animation:
+    rise .7s ease both;
 }
 
 .delay{
@@ -439,18 +631,25 @@ footer a{
 }
 
 @keyframes rise{
+
   from{
     opacity:0;
-    transform:translateY(14px);
+
+    transform:
+      translateY(14px);
   }
 
   to{
     opacity:1;
+
     transform:none;
   }
+
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -483,6 +682,7 @@ footer a{
   .stats{
     max-width:400px;
   }
+
 }
 
 @media(max-width:500px){
@@ -503,256 +703,556 @@ footer a{
 </style>
 </head>
 
+
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+
+  <div
+    class="container"
+    style="
+      display:flex;
+      align-items:center;
+      justify-content:space-between
+    "
+  >
 
     <div class="navlinks">
-      <a href="#projects">Projects</a>
-      <a href="#github-stats">GitHub Stats</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/satr-ux">GitHub ↗</a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#github-stats">
+        GitHub Stats
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="https://github.com/satr-ux">
+        GitHub ↗
+      </a>
+
     </div>
 
   </div>
+
 </nav>
 
 
 <main class="container">
 
-  <!-- HERO -->
 
-  <section class="hero">
+<!-- =========================
+     HERO
+========================= -->
 
-    <div class="hero-grid">
+<section class="hero">
 
-      <div class="card intro reveal">
+  <div class="hero-grid">
 
-        <div class="kicker">Profile</div>
 
-        <h1>Satr</h1>
+    <div class="card intro reveal">
 
-        <div class="handle">@satr-ux</div>
-
-        <div class="bio">
-          Best coder 🍕🍕<br>
-          Best IN ALL STUFF. DONT ASK ME ANYTHING THO.
-        </div>
-
-        <div class="actions">
-          <a class="btn primary" href="https://github.com/satr-ux">
-            View GitHub ↗
-          </a>
-        </div>
-
+      <div class="kicker">
+        Profile
       </div>
 
+      <h1>
+        Satr
+      </h1>
 
-      <aside class="card profile reveal delay">
-
-        <img
-          class="avatar"
-          src="https://avatars.githubusercontent.com/u/241788167?v=4"
-          alt="Satr"
-        >
-
-        <div class="status">
-          <span class="dot"></span>
-          Always Locked IN
-        </div>
-
-        <div class="location">
-          Sweden
-        </div>
-
-        <div class="stats">
-
-          <div class="stat">
-            <strong>5</strong>
-            <span>Repos</span>
-          </div>
-
-          <div class="stat">
-            <strong>2</strong>
-            <span>Stars</span>
-          </div>
-
-          <div class="stat">
-            <strong>∞</strong>
-            <span>Ideas</span>
-          </div>
-
-        </div>
-
-      </aside>
-
-    </div>
-
-  </section>
-
-
-  <!-- PROJECTS -->
-
-  <section id="projects" class="reveal delay2">
-
-    <div class="section-head">
-
-      <div>
-        <h2>Selected projects</h2>
-        <p>A few things from the GitHub profile.</p>
+      <div class="handle">
+        @satr-ux
       </div>
 
-    </div>
-
-
-    <div class="projects">
-
-      <a
-        class="card project"
-        href="https://github.com/satr-ux/Me"
-      >
-
-        <div class="project-top">
-          <h3>Me</h3>
-        </div>
-
-        <p>
-          “Wow refactored-meme is memorable and short.”
-        </p>
-
-        <div class="lang">
-          <i></i>HTML
-        </div>
-
-      </a>
-
-
-      <a
-        class="card project"
-        href="https://github.com/Kikolito1234/TurboGames"
-      >
-
-        <div class="project-top">
-          <h3>TurboGames</h3>
-        </div>
-
-        <p>
-          “I uppdated it now and hate you if your looking at this becuase your prob and ai”
-        </p>
-
-        <div class="lang">
-          <i></i>JavaScript
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- GITHUB STATS -->
-
-  <section id="github-stats" class="reveal">
-
-    <div class="section-head">
-
-      <div>
-        <h2>GitHub Stats</h2>
-        <p>Some stats from @satr-ux.</p>
+      <div class="bio">
+        Best coder 🍕🍕<br>
+        Best IN ALL STUFF. DONT ASK ME ANYTHING THO.
       </div>
 
-    </div>
-
-
-    <div class="github-stats">
-
-      <div class="card github-stat-card">
-
-        <img
-          src="https://streak-stats.demolab.com/?user=satr-ux&theme=tokyonight&hide_border=false"
-          alt="GitHub contribution streak"
-        >
-
-      </div>
-
-
-      <div class="card github-stat-card">
-
-        <img
-          src="https://github-readme-stats.shion.dev/api/top-langs/?username=satr-ux&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false&layout=compact"
-          alt="Most used programming languages"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section id="about" class="reveal">
-
-    <div class="section-head">
-      <h2>About</h2>
-    </div>
-
-
-    <div class="about">
-
-      <div class="card about-card">
-
-        <h3>Trying stuff.</h3>
-
-        <p>
-          I dont know lol
-        </p>
+      <div class="actions">
 
         <a
-          class="btn"
+          class="btn primary"
           href="https://github.com/satr-ux"
         >
-          github.com/satr-ux ↗
+          View GitHub ↗
         </a>
 
       </div>
 
+    </div>
 
-      <div class="card about-card">
 
-        <h3>Links</h3>
+    <!-- PROFILE CARD -->
 
-        <div class="tags">
+    <aside class="card profile reveal delay">
 
-          <a
-            class="tag"
-            href="https://github.com/satr-ux"
-          >
-            GitHub
-          </a>
+      <img
+        class="avatar"
+        src="https://avatars.githubusercontent.com/u/241788167?v=4"
+        alt="Satr"
+      >
 
-          <span class="tag">Sweden</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">HTML</span>
+      <div class="status">
+
+        <span class="dot"></span>
+
+        Always Locked IN
+
+      </div>
+
+      <div class="location">
+        Sweden
+      </div>
+
+
+      <!-- REAL GITHUB DATA -->
+
+      <div class="stats">
+
+        <div class="stat">
+
+          <strong id="repoCount">
+            ...
+          </strong>
+
+          <span>
+            Repos
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong id="starCount">
+            ...
+          </strong>
+
+          <span>
+            Stars
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>
+            ∞
+          </strong>
+
+          <span>
+            Ideas
+          </span>
 
         </div>
 
       </div>
 
+    </aside>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section
+  id="projects"
+  class="reveal delay2"
+>
+
+  <div class="section-head">
+
+    <div>
+
+      <h2>
+        Selected projects
+      </h2>
+
+      <p>
+        A few things from the GitHub profile.
+      </p>
+
     </div>
 
-  </section>
+  </div>
+
+
+  <div class="projects">
+
+
+    <a
+      class="card project"
+      href="https://github.com/satr-ux/Me"
+    >
+
+      <div class="project-top">
+
+        <h3>
+          Me
+        </h3>
+
+      </div>
+
+      <p>
+        “Wow refactored-meme is memorable and short.”
+      </p>
+
+      <div class="lang">
+
+        <i></i>
+        HTML
+
+      </div>
+
+    </a>
+
+
+    <a
+      class="card project"
+      href="https://github.com/Kikolito1234/TurboGames"
+    >
+
+      <div class="project-top">
+
+        <h3>
+          TurboGames
+        </h3>
+
+      </div>
+
+      <p>
+        “I uppdated it now and hate you if your looking at this becuase your prob and ai”
+      </p>
+
+      <div class="lang">
+
+        <i></i>
+        JavaScript
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     GITHUB STATS
+========================= -->
+
+<section
+  id="github-stats"
+  class="reveal"
+>
+
+  <div class="section-head">
+
+    <div>
+
+      <h2>
+        GitHub Stats
+      </h2>
+
+      <p>
+        Some stats from @satr-ux.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="github-stats">
+
+
+    <!-- GITHUB STREAK -->
+
+    <div class="card github-stat-card">
+
+      <img
+        src="https://streak-stats.demolab.com/?user=satr-ux&theme=tokyonight&hide_border=false"
+        alt="GitHub contribution streak"
+      >
+
+    </div>
+
+
+    <!-- TOP LANGUAGES -->
+
+    <div class="card github-stat-card">
+
+      <img
+        src="https://github-readme-stats.shion.dev/api/top-langs/?username=satr-ux&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false&layout=compact"
+        alt="Most used programming languages"
+      >
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  id="about"
+  class="reveal"
+>
+
+  <div class="section-head">
+
+    <h2>
+      About
+    </h2>
+
+  </div>
+
+
+  <div class="about">
+
+
+    <div class="card about-card">
+
+      <h3>
+        Trying stuff.
+      </h3>
+
+      <p>
+        I dont know lol
+      </p>
+
+      <a
+        class="btn"
+        href="https://github.com/satr-ux"
+      >
+        github.com/satr-ux ↗
+      </a>
+
+    </div>
+
+
+    <div class="card about-card">
+
+      <h3>
+        Links
+      </h3>
+
+      <div class="tags">
+
+        <a
+          class="tag"
+          href="https://github.com/satr-ux"
+        >
+          GitHub
+        </a>
+
+        <span class="tag">
+          Sweden
+        </span>
+
+        <span class="tag">
+          JavaScript
+        </span>
+
+        <span class="tag">
+          HTML
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
 
 </main>
 
 
 <footer>
+
   <div class="container">
   </div>
+
 </footer>
+
+
+<!-- =========================
+     GITHUB API
+========================= -->
+
+<script>
+
+async function loadGitHubStats(){
+
+  const repoElement =
+    document.getElementById("repoCount");
+
+  const starElement =
+    document.getElementById("starCount");
+
+
+  try{
+
+    /*
+      Get GitHub profile
+    */
+
+    const userResponse =
+      await fetch(
+        "https://api.github.com/users/satr-ux"
+      );
+
+
+    if(!userResponse.ok){
+      throw new Error(
+        "GitHub user request failed"
+      );
+    }
+
+
+    const user =
+      await userResponse.json();
+
+
+    /*
+      Real public repository count
+    */
+
+    repoElement.textContent =
+      user.public_repos;
+
+
+    /*
+      Get repositories
+    */
+
+    let repos = [];
+
+    let page = 1;
+
+
+    while(true){
+
+      const response =
+        await fetch(
+          `https://api.github.com/users/satr-ux/repos?per_page=100&page=${page}&type=owner`
+        );
+
+
+      if(!response.ok){
+        throw new Error(
+          "GitHub repository request failed"
+        );
+      }
+
+
+      const data =
+        await response.json();
+
+
+      if(!data.length){
+        break;
+      }
+
+
+      repos.push(...data);
+
+
+      /*
+        Less than 100 means
+        there are no more pages.
+      */
+
+      if(data.length < 100){
+        break;
+      }
+
+
+      page++;
+
+    }
+
+
+    /*
+      Add all repository stars
+    */
+
+    const totalStars =
+      repos.reduce(
+        (total, repo) =>
+          total +
+          (repo.stargazers_count || 0),
+        0
+      );
+
+
+    starElement.textContent =
+      totalStars;
+
+
+  }catch(error){
+
+    console.error(
+      "Could not load GitHub stats:",
+      error
+    );
+
+
+    /*
+      Don't show fake numbers
+    */
+
+    repoElement.textContent =
+      "—";
+
+    starElement.textContent =
+      "—";
+
+  }
+
+}
+
+
+/*
+  Load when page opens
+*/
+
+loadGitHubStats();
+
+</script>
 
 </body>
 </html>
+```
+
+Now the top card uses **live GitHub data**:
+
+* **Repos** = your actual public repositories
+* **Stars** = total stars across your public repositories
+* **Ideas** stays `∞`
+* No fake `5` / `2`
+* It automatically updates when GitHub data changes.
