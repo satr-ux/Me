@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satr — WhyOrbit</title>
+<meta name="description" content="Satr — coder, builder and creator from Sweden.">
+<style>
+:root{
+  --bg:#07090d;
+  --panel:rgba(17,20,27,.72);
+  --panel2:rgba(22,26,35,.62);
+  --border:rgba(255,255,255,.09);
+  --text:#f5f7fb;
+  --muted:#969daa;
+  --accent:#7c8cff;
+  --accent2:#56d6c9;
+  --shadow:0 24px 80px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 0%,rgba(124,140,255,.16),transparent 34%),
+    radial-gradient(circle at 85% 20%,rgba(86,214,201,.09),transparent 28%),
+    var(--bg);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 32px));margin:auto}
+nav{
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--border);backdrop-filter:blur(18px);
+  position:sticky;top:0;z-index:10;background:rgba(7,9,13,.68)
+}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:20px}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:8px}
+.navlinks a{padding:9px 13px;color:var(--muted);font-size:14px;border-radius:10px}
+.navlinks a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+.hero{padding:76px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:26px;align-items:stretch}
+.card{
+  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  border:1px solid var(--border);border-radius:28px;box-shadow:var(--shadow);
+  backdrop-filter:blur(22px)
+}
+.intro{padding:42px;position:relative;overflow:hidden}
+.intro:after{
+  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:rgba(124,140,255,.12);filter:blur(50px);right:-100px;top:-120px
+}
+.kicker{color:var(--accent2);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.14em}
+h1{font-size:clamp(48px,8vw,82px);line-height:.92;letter-spacing:-.07em;margin:16px 0}
+.handle{font-size:18px;color:var(--muted);margin-bottom:25px}
+.bio{font-size:18px;line-height:1.65;color:#d5d9e2;max-width:700px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 17px;border-radius:13px;
+  border:1px solid var(--border);background:rgba(255,255,255,.045);font-weight:650;font-size:14px
+}
+.btn.primary{background:var(--text);color:#090b10;border-color:transparent}
+.btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
+.btn.primary:hover{background:#fff}
+.profile{padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.avatar{
+  width:156px;height:156px;border-radius:50%;object-fit:cover;
+  border:5px solid rgba(255,255,255,.08);box-shadow:0 15px 50px rgba(0,0,0,.4)
+}
+.status{margin-top:18px;color:#aeb4c0;font-size:14px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#56d6c9;margin-right:7px;box-shadow:0 0 14px #56d6c9}
+.location{margin-top:8px;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;margin-top:25px}
+.stat{padding:14px 8px;border:1px solid var(--border);border-radius:15px;background:rgba(255,255,255,.025)}
+.stat strong{display:block;font-size:22px}.stat span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+section{padding:28px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:17px}
+.section-head h2{font-size:26px;letter-spacing:-.04em;margin:0}
+.section-head p{color:var(--muted);margin:0;font-size:14px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.project{padding:24px;min-height:190px;display:flex;flex-direction:column}
+.project:hover{border-color:rgba(124,140,255,.32);transform:translateY(-2px)}
+.project-top{display:flex;justify-content:space-between;gap:12px}
+.project h3{font-size:19px;margin:0;letter-spacing:-.025em}
+.badge{font-size:11px;color:#b9becc;border:1px solid var(--border);padding:5px 8px;border-radius:999px}
+.project p{color:var(--muted);line-height:1.55;font-size:14px;flex:1;margin:15px 0}
+.lang{font-size:12px;color:#c8ccd5}.lang i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:6px}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+.about-card{padding:28px}
+.about-card h3{margin-top:0}
+.about-card p{color:var(--muted);line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:8px 11px;border-radius:10px;background:rgba(255,255,255,.045);border:1px solid var(--border);font-size:13px;color:#c8ccd5}
+footer{padding:55px 0 35px;text-align:center;color:#707682;font-size:13px}
+footer a{color:#aeb4c0}
+.reveal{animation:rise .7s ease both}
+.delay{animation-delay:.1s}
+.delay2{animation-delay:.18s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(max-width:800px){
+  .hero{padding-top:40px}.hero-grid,.about{grid-template-columns:1fr}
+  .intro{padding:30px}.profile{padding:25px}.projects{grid-template-columns:1fr}
+  .navlinks a{display:none}.stats{max-width:400px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+    <a class="logo" href="#">why<span>orbit</span></a>
+    <div class="navlinks">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/satr-ux">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="card intro reveal">
+        <div class="kicker">Profile</div>
+        <h1>Satr</h1>
+        <div class="handle">@satr-ux</div>
+        <div class="bio">
+          Best coder 🍕🍕<br>
+          Best IN ALL STUFF. DONT ASK ME ANYTHING THO.
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="https://github.com/satr-ux">View GitHub ↗</a>
+          <a class="btn" href="https://whyorbit.com/">WhyOrbit ↗</a>
+        </div>
+      </div>
+
+      <aside class="card profile reveal delay">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/241788167?v=4" alt="Satr">
+        <div class="status"><span class="dot"></span>Always Locked IN</div>
+        <div class="location">Sweden</div>
+        <div class="stats">
+          <div class="stat"><strong>5</strong><span>Repos</span></div>
+          <div class="stat"><strong>2</strong><span>Stars</span></div>
+          <div class="stat"><strong>∞</strong><span>Ideas</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal delay2">
+    <div class="section-head">
+      <div>
+        <h2>Selected projects</h2>
+        <p>A few things from the GitHub profile.</p>
+      </div>
+    </div>
+    <div class="projects">
+      <a class="card project" href="https://github.com/satr-ux/miniature-rotary-phone">
+        <div class="project-top"><h3>miniature-rotary-phone</h3><span class="badge">Public</span></div>
+        <p>“miniature-rotary-phone is the goat of names in githnub”</p>
+        <div class="lang"><i></i>JavaScript</div>
+      </a>
+      <a class="card project" href="https://github.com/satr-ux/SkellyTD">
+        <div class="project-top"><h3>SkellyTD</h3><span class="badge">Public</span></div>
+        <p>A pinned project from Satr's GitHub profile.</p>
+        <div class="lang"><i></i>HTML</div>
+      </a>
+      <a class="card project" href="https://github.com/satr-ux/Me">
+        <div class="project-top"><h3>Me</h3><span class="badge">Public</span></div>
+        <p>“Wow refactored-meme is memorable and short.”</p>
+        <div class="lang"><i></i>GitHub project</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <div class="section-head"><h2>About</h2></div>
+    <div class="about">
+      <div class="card about-card">
+        <h3>Building stuff, trying stuff.</h3>
+        <p>
+          Satr is a developer from Sweden who likes making projects and experimenting
+          with code. This profile is a cleaner WhyOrbit presentation of the public
+          information from the GitHub profile.
+        </p>
+        <a class="btn" href="https://github.com/satr-ux">github.com/satr-ux ↗</a>
+      </div>
+      <div class="card about-card">
+        <h3>Links</h3>
+        <div class="tags">
+          <a class="tag" href="https://github.com/satr-ux">GitHub</a>
+          <a class="tag" href="https://whyorbit.com/">WhyOrbit</a>
+          <span class="tag">Sweden</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Satr · Built for <a href="https://whyorbit.com/">WhyOrbit</a></div>
+  </div>
+</footer>
+</body>
+</html>
